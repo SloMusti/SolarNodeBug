@@ -20,9 +20,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <Enrf24.h>
+//Radio libraries: https://github.com/spirilis/Enrf24 
+#include <Enrf24.h> 
 #include <nRF24L01.h>
+//Energia libraries
 #include <SPI.h>
+//Custom includes
 #include "packet.h"
 
 //Define pins
