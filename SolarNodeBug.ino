@@ -74,6 +74,8 @@ void setup()
   radio.begin();  // Defaults 1Mbps, channel 0, max TX power
   radio.setRXaddress((void*)rxaddr);
   radio.setTXaddress((void*)txaddr);
+  radio.setChannel(100); // Set channel somewhere beyond wifi range, 100 is 2500MHz
+  radio.setSpeed(250000);
   
   radio.enableRX();
   
@@ -172,12 +174,12 @@ void form_packet(){
   int battery_voltage=analogRead(A0);
   int solar_voltage=analogRead(A3);
   
-  Serial.println(battery_voltage);
-  Serial.println(solar_voltage);
+  //Serial.println(battery_voltage);
+ // Serial.println(solar_voltage);
  
   delay(1000);
   
-  Serial.println("");
+  //Serial.println("");
 }
 
 void measure_temeparture(){
